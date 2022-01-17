@@ -33,14 +33,16 @@ public class SubChromeTest {
 	    
 	    String myURL = "http://" + myIP + ":" + myPort + "/" + myAppName;
 	    System.out.println("Opening " + myURL);
-	    
-	    System.setProperty("webdriver.chrome.driver",prop.getProperty("webdriver_path") + "chromedriver");
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Saurabh T\\Downloads\\chromedriver_working.exe");
+
+//		System.setProperty("webdriver.chrome.driver",prop.getProperty("webdriver_path") + "chromedriver");
 	    System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
 	    System.setProperty("webdriver.chrome.verboseLogging", "true");
 	    System.out.println("System.setProperty!!");
 	    ChromeOptions chromeOptions = new ChromeOptions(); 
-	    if(System.getenv("MY_IP")!=null)
-		chromeOptions.addArguments("headless"); 
+//	    if(System.getenv("MY_IP")!=null)
+//		chromeOptions.addArguments("headless");
 
 	    chromeOptions.addArguments("--no-sandbox");
 	    driver = new ChromeDriver(chromeOptions); 
